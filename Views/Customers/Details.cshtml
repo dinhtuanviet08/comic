@@ -1,0 +1,25 @@
+@model ComicSystem.Models.Customer
+
+@{
+    ViewData["Title"] = "Customer Details";
+}
+
+<h1>Customer Details</h1>
+
+<div class="form-group">
+    <label>Name:</label>
+    <p>@Model.FullName</p>
+</div>
+<div class="form-group">
+    <label>Phone:</label>
+    <p>@Model.PhoneNumber</p>
+</div>
+<div class="form-group">
+    <label>Register Date:</label>
+    <p>@Model.RegisterDate.ToShortDateString()</p>
+</div>
+
+<p>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+    <a asp-action="Index" class="btn btn-secondary">Back</a>
+</p>

@@ -1,0 +1,28 @@
+@model ComicSystem.Models.ComicBook
+
+@{
+    ViewData["Title"] = "Edit Comic Book";
+}
+
+<h1>Edit Comic Book</h1>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Author" class="control-label"></label>
+        <input asp-for="Author" class="form-control" />
+        <span asp-validation-for="Author" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="PricePerDay" class="control-label"></label>
+        <input asp-for="PricePerDay" class="form-control" />
+        <span asp-validation-for="PricePerDay" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="Index" class="btn btn-secondary">Back</a>
+</form>
